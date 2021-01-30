@@ -1,0 +1,52 @@
+.heading1 {
+  color: darkblue;
+}
+
+.header2 {
+  color: red;
+}
+
+.my_div {
+  background: darkblue;
+  color: #FFF;
+  padding: 50px;
+  margin: 50px;
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+  padding: 10px 20px;
+  border: none;
+  color: #FFF;
+}
+
+.btn-primary {
+  background: darkblue;
+}
+
+.btn-secondary {
+  background: gray;
+}
+
+.btn-danger {
+  background: red;
+}
+
+.main {
+  margin: 20px;
+  background: #8b8bff;
+  padding: 20px;
+}
+
+.main .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .d-flex .div1 {
+  background: #DDD;
+  border: solid 2px red;
+  padding: 10px;
+  margin: 10px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let GroceryShop = [
+            {
+                title: "Item_One",
+                price: 300,
+                status: "Out Of Stock",
+                sold_quantity: 50,
+                comming_soon: "True",
+                category: "Cooking Essentials",
+                description: "Item_One_Description"
+            },
+            {
+                title: "Item_Two",
+                price: 100,
+                status: "In Stock",
+                sold_quantity: 100,
+                comming_soon: "False",
+                category: "Packaged Food",
+                description: "Item_Two_Description"
+            },
+            {
+                title: "Item_Three",
+                price: 300,
+                status: "In Stock",
+                sold_quantity: 200,
+                comming_soon: "True",
+                category: "Personal Care",
+                description: "Item_Three_Description"
+            },
+            {
+                title: "Item_Four",
+                price: 60,
+                status: "Out Of Stock",
+                sold_quantity: 10,
+                comming_soon: "False",
+                category: "Packaged Food",
+                description: "Item_Four_Description"
+            },
+            {
+                title: "Item_Five",
+                price: 50,
+                status: "In Stock",
+                sold_quantity: 10,
+                comming_soon: "True",
+                category: "Cooking Essentials",
+                description: "Item_Five_Description"
+            },
+        ];
+
+        class Grocery{
+            constructor(data){
+                //console.log(123);  
+                this.data=data;
+            }
+
+            getAllProductsAccordingToCategory(category){
+                var newShop=this.data.filter((el,index)=>{
+                    return el.category==category;
+                })
+                console.log(newShop);
+            }
+
+            getProductAccordingToPriceAndStatus(price, status){
+                var newShop=this.data.filter(el=>{
+                    return (el.price<price && el.status==status);
+                })
+                console.log(newShop);
+            }
+
+        }
+        var obj=new Grocery(GroceryShop);
+        //var obj1=new Grocery();
+       // obj.getAllProductsAccordingToCategory("Cooking Essentials");
+        obj.getProductAccordingToPriceAndStatus(150, "In Stock");
+    </script>
+</body>
+</html>

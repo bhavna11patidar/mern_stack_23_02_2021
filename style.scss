@@ -1,0 +1,54 @@
+//to use partial file
+@import "./variable";
+.heading1{
+    color:$primary_color;
+}
+
+.header2{
+    color:$danger_color;
+}
+.my_div{
+    background:$primary_color;
+    color:#FFF;
+    padding:50px;
+    margin:50px;
+}
+
+//inheritance property
+%btn{
+    padding:10px 20px;
+    border:none;
+    color:#FFF;
+}
+
+.btn-primary{
+    //use of inhritance property
+    @extend %btn;
+    background:$primary_color;
+}
+.btn-secondary{
+    @extend %btn;
+    background:$secondary_color;
+}
+.btn-danger{
+    @extend %btn;
+    background:$danger_color;
+}
+.main{
+    margin:20px;
+    //lighten and darken concept
+    //background:darken($primary_color, 10%);
+    background:lighten($primary_color, 50%);
+    padding:20px;
+    //to apply css according to parent element i.e. main class
+    .d-flex{
+        display: flex;
+         //to apply css according to parent element i.e. .main .flex
+            .div1{
+                background:#DDD;
+                border:solid 2px $danger_color;
+                padding:10px;
+                margin:10px;
+            }
+    }
+}
