@@ -2,3 +2,28 @@
 $primary_color:darkblue;
 $danger_color:red;
 $secondary_color:gray;
+
+$lightColor:#DDD;
+$darkColor:black;
+
+@function settingTextColor($color){
+    @if(lightness($color)>70){
+        @return $darkColor;
+    }@else{
+        @return $lightColor;
+    }
+}
+
+@mixin setBackgroundColor($color){
+    //background:$color;
+    color: settingTextColor($color);
+    background:$color;
+}
+
+
+$spaceAmount:(10,30,50,70);
+@each $space in $spaceAmount{
+    .m-#{$space}{
+        margin-top:#{$space}px;
+    }
+}

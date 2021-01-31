@@ -1,3 +1,19 @@
+.m-10 {
+  margin-top: 10px;
+}
+
+.m-30 {
+  margin-top: 30px;
+}
+
+.m-50 {
+  margin-top: 50px;
+}
+
+.m-70 {
+  margin-top: 70px;
+}
+
 .heading1 {
   color: darkblue;
 }
@@ -48,5 +64,19 @@
   border: solid 2px red;
   padding: 10px;
   margin: 10px;
+}
+
+.set_property {
+  background: #DDD;
+  color: black;
+  padding: 20px;
+  margin: 50px;
+}
+
+.mixin_property {
+  color: #DDD;
+  background: #000000;
+  padding: 20px;
+  margin: 50px;
 }
 /*# sourceMappingURL=style.css.map */

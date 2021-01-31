@@ -52,3 +52,18 @@
             }
     }
 }
+
+.set_property{
+    background:#DDD;
+    //function and if else conditions
+    color:settingTextColor(#DDD);
+    padding:20px;
+    margin:50px;
+}
+
+
+.mixin_property{
+    @include setBackgroundColor(#000000);
+    padding:20px;
+    margin:50px;
+}
